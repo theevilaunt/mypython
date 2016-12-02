@@ -1,8 +1,3 @@
-"""
-class to represent a car
-docstring for each module
-"""
-
 class Car():
 	def __init__(self,make,model,year):
 		self.make = make
@@ -14,7 +9,7 @@ class Car():
 		return (str(self.year) + " " + self.make + " " + self.model).title()
 
 	def odometer_read(self):
-		print("odometer: " + str(self.odometer))
+		print("odometer: " + self.odometer)
 
 	def odometer_set(self, value):
 		if value > self.odometer:
@@ -23,7 +18,6 @@ class Car():
 	def odometer_increment(self, value):
 		if (value > 0):
 			self.odometer += value
-
 
 class Battery():
 	def __init__(self,battery_size=70):
@@ -48,3 +42,11 @@ class ElectricCar(Car):
 	def __init__(self,make,model,year):
 		super().__init__(make,model,year)
 		self.battery = Battery()
+
+t = ElectricCar('tesla','model s',2016)
+print(t.description())
+t.battery.describe_battery()
+t.battery.get_range()
+t.battery.upgrade_battery()
+t.battery.describe_battery()
+t.battery.get_range()
