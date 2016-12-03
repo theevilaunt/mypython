@@ -12,5 +12,5 @@ class Admin(User):
 		super().__init__(first,last)
 		self.privileges = Privileges()
 
-a = Admin('heidi','keller')
-a.privileges.show_privileges()
+#a = Admin('heidi','keller')
+#a.privileges.show_privileges()
