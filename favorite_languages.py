@@ -1,11 +1,36 @@
 from collections import OrderedDict
 
-favorite_languages = OrderedDict()
+fl = {
+	'jen': 'python',
+	'sarah': 'c',
+	'edward': 'ruby',
+	'phil': 'python',
+}
 
-favorite_languages['jen'] = 'python'
-favorite_languages['sarah'] = 'c'
-favorite_languages['edward'] = 'ruby'
-favorite_languages['phil'] = 'python'
+for name in sorted(fl.keys()):
+	print ("sorted: " + name + ": " + fl[name])
 
-for name,language in favorite_languages.items():
-	print(name.title() + "'s favorite lang is " + language.title() + ".")
+for value in set(fl.values()):
+#for value in fl.values():
+	print(value)
+
+#print(sorted(fl, key=fl[0])
+
+for k,v in fl.items():
+	print(k.title() + "'s favorite lang is " + v.title() + ".")
+
+for name in fl.keys():
+	print(name.title())
+
+friends = ['phil','sarah']
+
+for name in fl:
+	#print(fl[name])
+	if name in friends:
+		print (name.title() + "'s favorite language is: " + fl[name].title())
+
+pollee = 'erin'
+if pollee not in fl:
+	print(pollee + " please take our poll")
+
+
